@@ -17,6 +17,9 @@ var turns;
 var pitch;
 var stiffness;
 //......................................................//
+$(window).on('load', function(){
+  $('#loader').fadeOut('fast');
+})
 
 $(document).ready(function() {
   $('#intro_text').hide().fadeIn(2000);
