@@ -1,0 +1,276 @@
+
+/*CSS Reset*/
+*,
+*:after,
+*:before {
+  margin:0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/*Roboto for Google Card*/
+@font-face {
+font-family: 'Roboto';
+src: url(../fonts/Roboto-Regular.ttf) format("truetype");
+}
+
+@font-face {
+font-family: 'Julius Sans One';
+src: url(../fonts/JuliusSansOne-Regular.ttf) format("truetype");
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-family: Roboto;
+  font-weight: 400;
+  font-size: 1.6em;
+  line-height: 1.6;
+  color: #666;
+}
+
+h3 {
+  letter-spacing: 5px;
+  text-transform: uppercase;
+  font: 18px "Lato", sans-serif;
+  color: #111;
+  text-align: center;
+}
+
+.introduction{
+  height: 100vh;
+  width:99%;
+  margin:auto;
+  background: url("../images/intro.jpg");
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-size:cover;
+  background-position: center;
+}
+
+.nav{
+height:50px;
+background-color: transparent;
+color:#aaa;
+}
+
+a{
+  text-decoration: none;
+  color:#aaa;
+}
+
+nav ul{
+  list-style-type: none;
+  overflow: hidden;
+  margin:0 40px 0 40px;
+}
+
+nav li{
+  float: right;
+  display: inline-block;
+  text-align: center;
+  padding: 15px;
+}
+
+nav li:first-child{
+  float:left;
+  font-size: 18px;
+  line-height: 20px;
+}
+
+#intro_text {
+  position: absolute;
+  top:50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  min-width:300px;
+  width:35%;
+  max-height: 200px;
+  text-align: center;
+  border: 3px solid #fff;
+  font:3.67vw "Julius Sans One";
+  color: #fff;
+}
+
+#intro_text p {
+  height: 100%;
+  margin: auto;
+  padding: 20px;
+}
+
+#intro_text span{
+  color:#ce9132;
+}
+
+.about p{
+color: #777;
+padding: 20px 15vw 40px 15vw;
+text-align: justify;
+}
+
+.about h3{
+  letter-spacing: 5px;
+  font: 30px "Julius Sans One";
+  color:#111;
+  margin: auto;
+  padding: 40px;
+}
+
+.calculator{
+  position: relative;
+  height: 100vh;
+  width:99%;
+  margin:auto;
+  background: url("../images/calculate.jpg");
+  back
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-size:cover;
+  background-position: center;
+}
+
+
+#wrapper{
+  position: absolute;;
+  top:50%;
+  left:50%;
+  transform: translate(-50%, -50%);
+  width:400px;
+  margin:auto;
+  padding-left: 1em;
+  padding-right: 1em;
+}
+
+.card {
+  background-color: rgba(192,192,192,0.2);
+  margin-bottom: 1.6rem;
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.15),
+              0 4px 6px 0 rgba(0,0,0,0.24);
+  transition: 0.3s;
+  overflow:hidden;
+  color:white;
+  border: 3px solid white;
+}
+
+.card:hover {
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+}
+
+.card_content {
+  min-height:350px;
+  padding: 2px 16px;
+  float:left;
+  display: none;
+  width:100%;
+}
+
+#prehead{
+  display:block;
+  text-align: center;
+  font-size: 1.5rem;
+  color: #bbb;
+}
+
+.card h3{
+  font: "Julius Sans One";
+  letter-spacing: 2px;
+  padding:10px;
+  color:white;
+}
+
+
+.card_form {
+text-align: center;
+}
+
+input{
+  display:inline;
+  margin:10px;
+  border: 1.5px solid white;
+  background-color: transparent;
+  color:white;
+  padding:10px;
+}
+
+input[type="submit"]{
+  font-size:10px;
+  text-transform: uppercase;
+  color: #111;
+  width:300px;
+  background-color: #fff;
+}
+
+::-webkit-input-placeholder{
+  color:white;
+}
+
+
+ul  {
+  list-style-position: inside;
+  margin: 40px auto 40px auto;
+  text-align: justify;
+}
+
+#assumption{
+
+}
+
+#assumption h3{
+  letter-spacing: 5px;
+  font: 30px "Julius Sans One";
+  color:#111;
+  margin: auto;
+  padding: 40px;
+}
+
+.banner{
+  height: 100vh;
+  width:99%;
+  margin:auto;
+  background: url("../images/intro.jpg");
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-size:cover;
+  background-position: center;
+  position: relative;
+}
+
+
+footer{
+  position: absolute;
+  bottom:0;
+  height: 400px;
+  width:800px;
+  left:50%;
+  right: 0;
+  transform: translate(-50%);
+  border: 3px solid white;
+}
+.contact {
+  display: inline-block;
+  margin: 50px;
+  border: 3px solid white;
+}
+
+.contact img{
+  display:block;
+  height: auto;
+  width: 150px;
+  margin: 0;
+}
+
+
+.contact_content{
+  background: white;
+  text-align: center;
+}
+
+footer h3{
+  letter-spacing: 5px;
+  font: 30px "Julius Sans One";
+  margin-top:25px;
+  padding: 20px;
+  color: white;
+}
