@@ -18,7 +18,7 @@ var pitch;
 var stiffness;
 //......................................................//
 $(window).on('load', function(){
-  $('#loader').fadeOut('fast');
+  $('#loader').hide();
   $('body').show();
 })
 
@@ -89,11 +89,11 @@ function findStiffness() {
 }
 
 function generateOutput() {
-  $('li:nth-child(1)').append(wireDiameter);
-  $('li:nth-child(2)').append(meanDiameter);
-  $('li:nth-child(3)').append(turns);
-  $('li:nth-child(4)').append(wireLength);
-  $('li:nth-child(5)').append(pitch);
-  $('li:nth-child(6)').append(stiffness);
+  $('#wireDiameter').append(wireDiameter);
+  $('#meanDiameter').append(meanDiameter);
+  $('#turns').append(turns);
+  $('#wireLength').append(wireLength);
+  $('#pitch').append(pitch);
+  $('#stiffness').append(stiffness);
 }
 //Private functions

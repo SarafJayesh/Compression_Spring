@@ -36,10 +36,10 @@
           <p style="text-align:center"> Enter the following requirements:</p><br>
             <div class="card_form">
               <form onsubmit="return false">               <!--to prevent refresh-->
-                <input type="text" name="load" id="load" placeholder="Axial Load (N)">
-                <input type ="text" name="deflection" id="deflection" placeholder="Deflection (mm)" >
-                <input type="text" name="index" id="index" placeholder="Spring Index">
-                <input type="text" name="factor" id="factor" placeholder="Factor of Safety">
+                <input type="text" name="load" id="load" placeholder="Axial Load (N)" required>
+                <input type ="text" name="deflection" id="deflection" placeholder="Deflection (mm)" required>
+                <input type="text" name="index" id="index" placeholder="Spring Index" required>
+                <input type="text" name="factor" id="factor" placeholder="Factor of Safety" required>
                 <input type="submit">
               </form>
             </div>
@@ -47,12 +47,12 @@
         <div class="card_content" id="output">
           For the the provided specifications, the following dimensions are required:<br>
           <ul>
-            <li>Wire Diameter =  </li>
-            <li>Mean Diameter = </li>
-            <li>Turns = </li>
-            <li>Wire Length = </li>
-            <li>Pitch = </li>
-            <li>Stiffness = </li>
+            <li id="wireDiameter">Wire Diameter =  </li>
+            <li id="meanDiameter">Mean Diameter= </li>
+            <li id="turns">Turns = </li>
+            <li id="wireLength">Wire Length = </li>
+            <li id="pitch">Pitch = </li>
+            <li id="stiffness">Stiffness = </li>
           </ul>
           Calculate <a href= index.html>Again?</a>
         </div>
