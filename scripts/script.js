@@ -19,6 +19,7 @@ var stiffness;
 //......................................................//
 $(window).on('load', function(){
   $('#loader').fadeOut('fast');
+  $('body').show();
 })
 
 $(document).ready(function() {
