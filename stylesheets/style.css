@@ -8,7 +8,7 @@
   box-sizing: border-box;
 }
 
-/*Roboto for Google Card*/
+/*fonts*/
 @font-face {
 font-family: 'Roboto';
 src: url(../fonts/Roboto-Regular.ttf) format("truetype");
@@ -18,20 +18,9 @@ src: url(../fonts/Roboto-Regular.ttf) format("truetype");
 font-family: 'Julius Sans One';
 src: url(../fonts/JuliusSansOne-Regular.ttf) format("truetype");
 }
+/*............................................................................*/
 
-html {
-  font-size: 62.5%;
-}
-
-body {
-  font-family: Roboto;
-  font-weight: 400;
-  font-size: 1.6em;
-  line-height: 1.6;
-  color: #666;
-  display: none;
-}
-
+/*loading animation*/
 #loader{
   position: absolute;
   left: 50%;
@@ -49,16 +38,64 @@ body {
 }
 
 @keyframes spin {
-  0% { transform: rotate(0deg); }
+  0%   { transform: rotate(0deg); }
   100% { transform: rotate(360deg); }
 }
 
+/*............................................................................*/
+/*Base*/
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-family: Roboto;
+  font-weight: 400;
+  font-size: 1.6em;
+  line-height: 1.6;
+  color: #666;
+  display: none; /*display after loading animation -jquery*/
+}
+
 h3 {
-  letter-spacing: 5px;
   text-transform: uppercase;
   font: 18px "Lato", sans-serif;
   color: #111;
+  letter-spacing: 5px;
   text-align: center;
+}
+
+a{
+  text-decoration: none;
+  color:#aaa;
+}
+
+/*............................................................................*/
+
+.nav{
+height:50px;
+background-color: transparent;
+color:#aaa;
+}
+
+nav ul{
+  list-style-type: none;
+  overflow: hidden;
+  margin:0 40px 0 40px;
+}
+
+nav li{
+  display: inline-block;
+  float: right;
+  text-align: center;
+  padding: 15px;
+}
+
+.nav_left{
+  float:left;
+  font-size: 18px;
+  line-height: 20px;
 }
 
 .introduction{
@@ -72,35 +109,6 @@ h3 {
   background-position: center;
 }
 
-.nav{
-height:50px;
-background-color: transparent;
-color:#aaa;
-}
-
-a{
-  text-decoration: none;
-  color:#aaa;
-}
-
-nav ul{
-  list-style-type: none;
-  overflow: hidden;
-  margin:0 40px 0 40px;
-}
-
-nav li{
-  float: right;
-  display: inline-block;
-  text-align: center;
-  padding: 15px;
-}
-
-nav li:first-child{
-  float:left;
-  font-size: 18px;
-  line-height: 20px;
-}
 
 #intro_text {
   position: absolute;
@@ -126,12 +134,6 @@ nav li:first-child{
   color:#ce9132;
 }
 
-.about p{
-color: #777;
-padding: 20px 15vw 40px 15vw;
-text-align: justify;
-}
-
 .about h3{
   letter-spacing: 5px;
   font: 30px "Julius Sans One";
@@ -140,19 +142,23 @@ text-align: justify;
   padding: 40px;
 }
 
+.about p{
+color: #777;
+padding: 20px 15vw 40px 15vw;
+text-align: justify;
+}
+
 .calculator{
   position: relative;
   height: 100vh;
   width:99%;
   margin:auto;
   background: url("../images/calculate.jpg");
-  back
   background-attachment: fixed;
   background-repeat: no-repeat;
   background-size:cover;
   background-position: center;
 }
-
 
 #wrapper{
   position: absolute;;
@@ -203,7 +209,7 @@ text-align: justify;
 }
 
 
-.card_form {
+.input_form {
 text-align: center;
 }
 
@@ -229,14 +235,10 @@ input[type="submit"]{
 }
 
 
-ul  {
+#output ul  {
   list-style-position: inside;
   margin: 40px auto 40px auto;
   text-align: justify;
-}
-
-#assumption{
-
 }
 
 #assumption h3{
@@ -270,6 +272,14 @@ footer{
   transform: translate(-50%);
   border: 3px solid white;
 }
+
+footer h3{
+  font: 30px "Julius Sans One";
+  margin-top:25px;
+  padding: 20px;
+  color: white;
+}
+
 .contact {
   display: inline-block;
   margin: 50px;
@@ -283,16 +293,7 @@ footer{
   margin: 0;
 }
 
-
 .contact_content{
   background: white;
   text-align: center;
-}
-
-footer h3{
-  letter-spacing: 5px;
-  font: 30px "Julius Sans One";
-  margin-top:25px;
-  padding: 20px;
-  color: white;
 }

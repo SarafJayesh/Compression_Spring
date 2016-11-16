@@ -3,10 +3,12 @@ var load;
 var deflection;
 var index;
 var factor;
+var maxShearStress; //working stress in N/mm2
+var rigidity;
 
 //Private variables
-var yieldStress; //working stress in N/mm2
-var rigidity;    //rigidity in N/mm2
+//working stress in N/mm2
+var workingShearStress;    //rigidity in N/mm2
 var springEnd;
 
 //Output variables
@@ -35,6 +37,8 @@ $(document).ready(function() {
     deflection = $('#deflection').val();
     index = $('#index').val();
     factor =$('#factor').val();
+    maxShearStress=$('#stress').val();
+    rigidity=$('#rigidity').val()*1000;
 
     //Find Specifications
     setAssumptions();
@@ -58,8 +62,7 @@ function calculateOutput() {
 
 function setAssumptions() {
   //Chrome Vanadium Steel
-  yieldStress = (690/factor);
-  rigidity = 79340;
+  workingShearStress = (maxShearStress/factor);
   springEnd = 2; //Squared and Ground End
 }
 
@@ -67,32 +70,33 @@ function setAssumptions() {
 //Private Functions
 
 function findDiameter() {
-var wahlStressFactor = (4*index-1)/(4*index-4) + (0.615/index);
-wireDiameter = Math.ceil(Math.sqrt((8*load*wahlStressFactor*index)/3.14));
-meanDiameter = Math.ceil(wireDiameter*index);
+var wahlStressFactor = ((4*index-1)/(4*index-4)) + (0.615/index);
+wireDiameter = (Math.sqrt((8*load*wahlStressFactor*index)/(3.14*workingShearStress))).toFixed(2);
+meanDiameter = (wireDiameter*index).toFixed(2);
 }
 
 function findTurns() {
-  turns = Math.ceil((deflection*rigidity*(Math.pow(wireDiameter,4)))/(8*load*(Math.pow(meanDiameter,3))));
+  turns = Math.ceil((deflection*rigidity*wireDiameter)/(8*load*index*index*index)+2);
+
 }
 
 function findLength() {
-  wireLength = Math.ceil((turns+springEnd)*wireDiameter+deflection*1.25);
+  wireLength =((turns)*wireDiameter+deflection*1.15).toFixed(2);
 }
 
 function findPitch() {
-  pitch = Math.ceil((wireLength-2*wireDiameter)/turns);
+  pitch = ((wireLength/(turns-1)).toFixed(2));
 }
 
 function findStiffness() {
-  stiffness = load/deflection;
+  stiffness = (load/deflection).toFixed(2);
 }
 
 function generateOutput() {
-  $('#wireDiameter').append(wireDiameter);
-  $('#meanDiameter').append(meanDiameter);
+  $('#wireDiameter').append(wireDiameter+" mm");
+  $('#meanDiameter').append(meanDiameter+" mm");
   $('#turns').append(turns);
-  $('#wireLength').append(wireLength);
+  $('#wireLength').append(wireLength+" mm");
   $('#pitch').append(pitch);
   $('#stiffness').append(stiffness);
 }

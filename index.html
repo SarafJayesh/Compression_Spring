@@ -12,7 +12,7 @@
     <div class="introduction">
       <nav>
           <ul>
-            <li><a href="http://www.nirmauni.ac.in">Nirma University</a></li>
+            <li class=nav_left><a href="http://www.nirmauni.ac.in">Nirma University</a></li>
             <li><a href=#credits>Credits</a></li>
             <li><a href=#calculate>Calculate</a></li>
             <li><a href=#about>About</a></li>
@@ -29,36 +29,38 @@
     </div>
     <a name="calculate"></a>
     <div class="calculator">
-    <div id="wrapper">
-      <div class="card">
-        <div class="card_content" id="input">
-          <h3>Calculate Dimensions</h3>
-          <p style="text-align:center"> Enter the following requirements:</p><br>
-            <div class="card_form">
+      <div id="wrapper">
+        <div class="card">
+          <div class="card_content" id="input">
+            <h3>Calculate Dimensions</h3>
+            <p style="text-align:center"> Enter the following requirements:</p><br>
+            <div class="input_form">
               <form onsubmit="return false">               <!--to prevent refresh-->
                 <input type="text" name="load" id="load" placeholder="Axial Load (N)" required>
-                <input type ="text" name="deflection" id="deflection" placeholder="Deflection (mm)" required>
+                <input type="text" name="deflection" id="deflection" placeholder="Deflection (mm)" required>
                 <input type="text" name="index" id="index" placeholder="Spring Index" required>
                 <input type="text" name="factor" id="factor" placeholder="Factor of Safety" required>
+                <input type="text" name="shearstress" id="stress" placeholder="Max Shear Stress (N/mm2)" required>
+                <input type="text" name="rigidity" id="rigidity" placeholder="Rigidity (KN/mm2)" required>
                 <input type="submit">
               </form>
             </div>
-        </div>
-        <div class="card_content" id="output">
-          For the the provided specifications, the following dimensions are required:<br>
-          <ul>
-            <li id="wireDiameter">Wire Diameter =  </li>
-            <li id="meanDiameter">Mean Diameter= </li>
-            <li id="turns">Turns = </li>
-            <li id="wireLength">Wire Length = </li>
-            <li id="pitch">Pitch = </li>
-            <li id="stiffness">Stiffness = </li>
-          </ul>
-          Calculate <a href= index.html>Again?</a>
+          </div>
+          <div class="card_content" id="output">
+            For the the provided specifications, the following dimensions are required:<br>
+            <ul>
+              <li id="wireDiameter">Wire Diameter =  </li>
+              <li id="meanDiameter">Mean Diameter= </li>
+              <li id="turns">Turns = </li>
+              <li id="wireLength">Wire Length = </li>
+              <li id="pitch">Pitch = </li>
+              <li id="stiffness">Stiffness = </li>
+            </ul>
+            Calculate <a href= index.html>Again?</a>
+          </div>
         </div>
       </div>
     </div>
-  </div>
     <div class="about">
       <h3>USES</h3>
       <p>Actuators, Valves, Snow Removal, Railroad, Locomotives, Freight car, Agriculture, Construction, Elevator, Mining and Aggregate, Petrochemical, Pipe Hanger & Support, Playground, Power Generation, Transportation, Vibration Isolation, Industrial Equipment, Material Handling, Automotive, and  Nuclear. </p>
@@ -67,28 +69,31 @@
       <footer>
         <a name="credits"></a>
         <h3>MADE BY</h3>
-      <div class="contact">
-        <div class="contact_image"><img src="images/harshit.jpg"></div>
-        <div class="contact_content">
-          HARSHIT DANGI<br>
-          15BME045
+        <div class="contact">
+          <div class="contact_image"><img src="images/harshit.jpg">
+          </div>
+          <div class="contact_content">
+            HARSHIT DANGI<br>
+            15BME045
+          </div>
         </div>
-      </div>
-      <div class="contact">
-        <div class="contact_image"><img src="images/hozefa.jpg"></div>
-        <div class="contact_content">
-          HOZEFA BOHRA<br>
-          15BME049
+        <div class="contact">
+          <div class="contact_image"><img src="images/hozefa.jpg">
+          </div>
+          <div class="contact_content">
+            HOZEFA BOHRA<br>
+            15BME049
+          </div>
         </div>
-      </div>
-      <div class="contact">
-        <div class="contact_image"><img src="images/jayesh.jpg"></div>
-        <div class="contact_content">
-          JAYESH SARAF<br>
-          15BME052
+        <div class="contact">
+          <div class="contact_image"><img src="images/jayesh.jpg">
+          </div>
+          <div class="contact_content">
+            JAYESH SARAF<br>
+            15BME052
+          </div>
         </div>
-      </div>
-    </footer>
+      </footer>
     </div>
   </body>
 </html>
